@@ -3,15 +3,24 @@ body {
 }
 
 #cow {
+	display: inline-block;
+	float: left;
 	color: #be9b7b;
 	white-space: pre;
 	font-family: Source Code Pro for Powerline;
 	font-size: 14px;
 }
 
-#search-bar {
+.linkmage {
+	width: 150px;
+	height: 150px;
+	border: 2px solid transparent;
 }
 
+.linkmage:hover{
+	border: 2px solid #be9b7b;
+	border-radius: 5px;
+}
 /* Google */
 
 /***********************
@@ -131,4 +140,9 @@ input:-moz-placeholder {
   font-weight: bold;
   line-height: 45px;
   text-align: center;
+}
+
+
+table {
+	float: right;
 }
