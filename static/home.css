@@ -1,0 +1,10 @@
+body {
+	background-color: #4b3832;
+}
+
+#cow {
+	color: #be9b7b;
+	white-space: pre;
+	font-family: Source Code Pro for Powerline;
+	font-size: 14px;
+}
