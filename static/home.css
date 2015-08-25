@@ -1,10 +1,27 @@
+/* Clock */
+@font-face {
+    font-family: "style-7";
+    src: url("thin_pixel-7.ttf");
+}
+
+#panel{
+	display: inline-block;
+	float: left;
+}
+
+#clock{
+	font-family: style-7;
+	color: #be9b7b;
+	font-size: 10em;
+}
+
 body {
 	background-color: #4b3832;
 }
 
 #cow {
 	display: inline-block;
-	float: left;
+	float: right;
 	color: #be9b7b;
 	white-space: pre;
 	font-family: Source Code Pro;
