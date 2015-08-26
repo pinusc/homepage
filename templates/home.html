@@ -21,7 +21,7 @@
 		<div class="flexsearch--wrapper">
 			<form class="flexsearch--form" method="get" action="http://www.google.com/search">
 				<div class="flexsearch--input-wrapper">
-					<input class="flexsearch--input" type="text" name="q" placeholder="search">
+					<input class="flexsearch--input" type="text" name="q" placeholder="Google Search" autofocus>
 				</div>
 				<input class="flexsearch--submit" type="submit" value="&#10140;"/>
 			</form>
@@ -68,5 +68,21 @@
 </table>
 
 <p id="cow">{{ cowsay }}</p>
+
+<div id="weather-container">
+	<div class="forecast-wrapper">
+		{% for day in forecast %}
+			<div class="forecast">
+				<img class="weather-image" src="{{ day.sky }}"/>
+				<div class="weather-text-wrapper">
+					<span class="day">{{ day.day }}</span>
+					<span class="temp">Temp: {{ day.temperature }} °C</span>
+					<span>Wind: {{ day.wind }} km/h</span>
+				</div>
+			</div>
+		{% endfor %}
+	<div class="spacer" style="clear: both;"></div>
+</div>
+
 </body>
 </html>

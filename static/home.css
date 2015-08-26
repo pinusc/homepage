@@ -163,3 +163,62 @@ input:-moz-placeholder {
 table {
 	float: right;
 }
+
+/* Weather */
+#weather-container {
+	overflow: hidden;
+	clear: left;
+	position:relative;
+}
+
+.forecast-wrapper{
+	float: left;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.forecast{
+	display: inline-block;
+	position: relative;
+	margin-top: 10px;
+}
+
+.weather-image{
+	float: left;
+	height: 4em;
+	width: 4em;
+	margin-right: 10px;
+}
+
+.weather-text-wrapper{
+	position: relative;
+	float: left;
+	display: inline-block;
+}
+
+.forecast span{
+	font-family: Source Code Pro;
+	color: #be9b7b;
+	display: block;
+	font-size: 13px;
+}
+
+.forecast .day {
+	font-size: 17px;
+	color: #fff4e6;
+}
+
+/* Today's larger */
+.forecast:first-child .weather-image{
+	height:  8em;
+	width: 8em;
+}
+
+.forecast:first-child span{
+	font-size: 20px;
+}
+
+.forecast:first-child .day {
+	font-size: 25px;
+}
