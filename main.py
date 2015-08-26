@@ -8,12 +8,10 @@ app = Flask(__name__)
 static = 'static/'
 @app.route("/")
 def hello():
-	try:
-		fortune = subprocess.check_output('fortune -s -o', shell=True, universal_newlines=True)
-		fortune = fortune.replace('"', '\\"')
-		cow = subprocess.check_output('cowsay -f $(ls /usr/share/cows|  shuf -n1) "%s"' % (fortune), shell=True, universal_newlines=True)
-	except Exception as e:
-		return str(e)
+	fortune = subprocess.check_output('fortune -s', shell=True, universal_newlines=True)
+	fortune = fortune.replace('"', '\\"')
+	cow = subprocess.check_output('cowsay -f $(ls /usr/share/cows|  shuf -n1) "%s"' % (fortune), shell=True, universal_newlines=True)
+	
 	json = get_weather()
 	days = []
 	for i in range(4):
